@@ -8,44 +8,26 @@
     body {
       margin: 0;
       padding: 0;
-      overflow: auto;
-      background: #000;
-    }
-
-    .poster-wrapper {
-      width: 100vw;
-      height: 100vh;
-      overflow: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
+      background-color: #f0f0f0;
     }
 
     iframe {
-      transform: scale(0.3); /* pas aan voor mobiel formaat */
-      transform-origin: top left;
-      width: 3500px; /* grote breedte voor A0 */
-      height: 2480px;
+      width: 100%;
+      height: 100vh;
       border: none;
-    }
-
-    @media (min-width: 768px) {
-      iframe {
-        transform: scale(0.5); /* iets minder uitgezoomd voor tablets */
-      }
     }
 
     @media (min-width: 1024px) {
       iframe {
-        transform: scale(1); /* volledige grootte op desktop */
+        zoom: 0.75; /* alleen op desktop lichtjes uitzoomen */
+        height: 135vh; /* iets groter voor zoom-effect */
       }
     }
   </style>
 </head>
 <body>
-  <div class="poster-wrapper">
-    <iframe src="HARM_RUG_ELM_PDF_PRESENTATIEPOSTER_V02_NL.pdf"></iframe>
-  </div>
+  <iframe src="HARM_RUG_ELM_PDF_PRESENTATIEPOSTER_V02_NL.pdf"></iframe>
+</body>
+</html>
 </body>
 </html>
