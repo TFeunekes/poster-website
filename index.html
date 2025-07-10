@@ -3,16 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Poster - Harmoniegebouw BIM Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { margin: 0; padding: 0; }
-    iframe {
-      width: 100%;
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      background: #000;
+    }
+
+    .poster-wrapper {
+      width: 100vw;
       height: 100vh;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    iframe {
+      transform: scale(0.3); /* pas aan voor mobiel formaat */
+      transform-origin: top left;
+      width: 3500px; /* grote breedte voor A0 */
+      height: 2480px;
       border: none;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        transform: scale(0.5); /* iets minder uitgezoomd voor tablets */
+      }
+    }
+
+    @media (min-width: 1024px) {
+      iframe {
+        transform: scale(1); /* volledige grootte op desktop */
+      }
     }
   </style>
 </head>
 <body>
-  <iframe src="HARM_RUG_ELM_PDF_PRESENTATIEPOSTER_V02_NL.pdf"></iframe>
+  <div class="poster-wrapper">
+    <iframe src="HARM_RUG_ELM_PDF_PRESENTATIEPOSTER_V02_NL.pdf"></iframe>
+  </div>
 </body>
 </html>
